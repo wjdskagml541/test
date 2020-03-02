@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.azure.partnercenter.subscription.mapper.SubscriptionMapper">
+
+	<insert id="insertSubscription" parameterType="com.azure.partnercenter.subscription.dto.SubscriptionDto">
+	insert into sb_subscription(
+		cus_id,
+		sub_id,
+		sub_name,
+		status,
+		billingType,
+		billingCycle,
+		isTrial
+	)
+	values(
+		#{customerId},
+		#{subscriptionId},
+		#{subscriptionName},
+		#{status},
+		#{billingType},
+		#{billingCycle},
+		#{isTrial}
+	)
+	</insert>
+	
+</mapper>

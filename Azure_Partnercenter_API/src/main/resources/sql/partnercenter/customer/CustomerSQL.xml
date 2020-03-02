@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.azure.partnercenter.customer.mapper.CustomerMapper">
+
+	<insert id="insertCustomer" parameterType="com.azure.partnercenter.customer.dto.CustomerDto">
+	insert into ct_customer(
+		cus_id,
+		commerceid,
+		relationshiptopartner,
+		allowdelegatedaccess,
+		customdomains,
+		associatedpartnerid,
+		companyName
+	)
+	values(
+		#{customerId},
+		#{commerceId},
+		#{relationshipToPartner},
+		#{allowDelegatedAccess},
+		#{customDomains},
+		#{associatedPartnerId},
+		#{companyName}
+	)
+	</insert>
+	
+	<select id="selectCustomerList" resultType="String">
+	select cus_id from ct_customer
+	</select>
+</mapper>
