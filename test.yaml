@@ -26,9 +26,6 @@ spec:
             cpu: 250m
           limits:
             cpu: 500m
-        env:
-        - name: REDIS
-          value: "mavenweb"
 ---
 apiVersion: v1
 kind: Service
