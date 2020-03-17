@@ -18,7 +18,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: mavenweb
-        image: nhjcontainreg.azurecr.io/wjdskagml541/test:v1
+        image: nhjcontainreg.azurecr.io/wjdskagml541/test:#{Build.BuildId}#
         ports:
         - containerPort: 80
         resources:
