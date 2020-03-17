@@ -1,4 +1,4 @@
-apiVersion: mavenweb
+apiVersion: mavenweb/v1
 kind: Deployment
 metadata:
   name: mavenweb
