@@ -1,4 +1,4 @@
-apiVersion: wjdskagml541/test
+apiVersion: mavenweb
 kind: Deployment
 metadata:
   name: mavenweb
@@ -18,7 +18,7 @@ spec:
         "beta.kubernetes.io/os": linux
       containers:
       - name: mavenweb
-        image: nhjcontainreg.azurecr.io/wjdskagml541/test:#{Build.BuildId}#
+        image: nhjcontainreg.azurecr.io/mavenweb:#{Build.BuildId}#
         ports:
         - containerPort: 80
         resources:
